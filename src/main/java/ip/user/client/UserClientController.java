@@ -42,7 +42,7 @@ public class UserClientController {
         if (request != null) {
             remoteAddress = getClientIpAddress(request);
         }
-        restTemplate.getForEntity("https://spring-server-test.herokuapp.com/api/{ipaddress}", String.class, remoteAddress);
+        restTemplate.getForEntity("https://spring-app-server.herokuapp.com/api/{ipaddress}", String.class, remoteAddress);
         return new ResponseEntity<Object>(remoteAddress, headers, HttpStatus.OK);
     }
  
